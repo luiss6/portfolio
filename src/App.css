@@ -18,7 +18,7 @@
   justify-content: flex-end;
   background-color:rgba(133, 133, 133, 0.6);
   opacity:0.8;
-  font-size: 1 em;
+  font-size: calc(14px + 8*(100vw - 300px)/1300);
   margin: 0;
 }
 
@@ -78,7 +78,7 @@ img {
 
 .title {
   color: white;
-  font-size: 1.4em;
+  font-size: calc(20px + 8*(100vw - 300px)/1300);
   padding: 10px;
 }
 
@@ -103,7 +103,7 @@ img {
   }
 
   .title {
-    font-size: 1em;
+    /* font-size: 1em; */
     padding: 5px;
   }
 }

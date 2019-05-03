@@ -8,7 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
@@ -16,9 +16,31 @@ code {
   display: flex;  
   list-style: none;
   justify-content: flex-end;
-  margin-right: 20px;
+  margin-right: 0;
+  background-color:rgb(237, 239, 241);
+}
+.box{
+  background-color:black;
 }
 
 li {
   padding: 30px;
+  color: black;
+  font-size: 1.5;
+  font-weight: bold;
+  text-decoration: none;
+  
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+  opacity: 1;
+} */

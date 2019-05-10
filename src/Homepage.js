@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 import BackgroundPc from "./Images/Pic2.jpg";
+import Kodflix from "./Images/Kodflix.png";
 
 
 function Homepage() {
@@ -9,7 +10,7 @@ function Homepage() {
         <div>  
             <div className="homepage">
                 <nav>        
-                    <ul className="main-nav">
+                    <ul className="main-nav sticky">
                         <li className="push">My Portfolio</li>
                         <a href="#about" className="link"><li >About me</li></a>
                         <a href="#projects" className="link"><li >Projects</li></a>
@@ -22,9 +23,9 @@ function Homepage() {
                 <div className="background-container">
                     <div className="title-box">
                         <h1 className="centered title">Luigi Nurra</h1>
-                        <h2 className="centered-below title">Full stack web developer</h2>
+                        <h2 className="centered-below title">Web Developer</h2>
                     </div>
-                    <img src={ BackgroundPc }/>
+                    <img className="cover" src={ BackgroundPc }/>
                 </div>
            </div>
            <div id="about">
@@ -39,8 +40,17 @@ function Homepage() {
                  ultrices posuere cursus, ante nulla vulputate orci, a semper nisl dolor a sem. Quisque pellentesque a felis sit amet congue. </p>
            </div>
            <div id="projects">
+                        <h2>Projects</h2>
+                        <img className="projectImage" src={ Kodflix }/>
            </div>
            <div id="contact">
+                <h2>Please contact me using the form below</h2>
+                <form className="formContainer">
+                        <input className="emailForm" type="email" placeholder="please enter your email address" required></input>
+                        <textarea className="messageForm"placeholder="please type your message"></textarea>
+                
+                </form>
+                <button type="submit" form="formContainer" value="Submit" strong>Send</button>
            </div> 
            <footer>
                website made by

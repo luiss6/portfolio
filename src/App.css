@@ -3,50 +3,57 @@
   padding: 0;
   --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size: 10px;
+
 }
 
 body {
   text-align: center;
 }
 
+.link {
+
+}
+
+.link:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);
+}
+
+
 /* NAV     ******************************************** */
-/* .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-} */
 
 .main-nav {
   display: flex;  
   list-style: none;
   justify-content: flex-end;
-  background-color:#000;
+  background-color:#de0606;
   opacity:0.8;
   font-size: calc(14px + 8*(100vw - 300px)/1300);
   margin: 0;
+  /* position: fixed; */
   }
 
-li {
+.main-nav li {
   padding: 20px;
   color: white;  
   font-weight: bold;
+  font-size: 2rem;
 }
 
 .link {
   text-decoration: none;
 }
 
-.push{
+.push {
   margin-right: auto;
-  color:rgb(230, 216, 24);
+  color: yellow;
 }
 
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .main-nav {
-    font-size: 0.7em;
-    padding: 3px;
+    flex-direction: column;
   }
-} */
+}
 
 /* homepage ************************* */
 
@@ -54,8 +61,7 @@ li {
 .cover {
   background-image: url("./Images/bkg1.jpg");
   height: 100vh;
-  background-size: cover;
-  
+  background-size: cover;  
 }
 
 .background-container {
@@ -69,7 +75,7 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-  font-size: calc(32px + 8*(100vw - 300px)/1300);
+  font-size: 3.5rem;
   font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
 }
 
@@ -78,8 +84,7 @@ li {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: calc(23px + 8*(100vw - 300px)/1300);
-
+  font-size: 2.7rem;
   font-family:  source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace;
 }
 
@@ -99,26 +104,15 @@ li {
 
 
 @media only screen and (max-width: 600px) {
-  .centered {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .centered-below {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+ 
+  .centered-below {    
+    top: 35%;    
   }
 
   .title {
-    /* font-size: 1em; */
     padding: 5px;
   }
 }
-
-
 
 /* About **************************** */
 
@@ -130,6 +124,12 @@ li {
 
 .about-header{
   padding: 10px;
+  font-size: 2.6rem;
+}
+
+#about p {
+  font-size: 2rem;
+  text-align: left;
 }
 
 .tech-stack-list {
@@ -137,42 +137,36 @@ li {
   flex-direction: row;
   justify-content: center;
   list-style-type: none;
-
-}
-
-.js {
-  color: green;
+  flex-wrap: wrap;
+  margin: 6rem 0;
 }
 
 .html {
-  color: blue;
+  color: #e34f26;
 }
 
 .css {
-  color: red;
+  color:#016db5;
+}
+
+.js {
+  color: #fdda3e;
 }
 
 .react {
-  color: blue;
+  color:#5ed4f4;
 }
 
 .node {
-  color: black;
+  color: #8cc13f;
 }
 
-.tech-stack-list li {
+.tech-stack-list i {
   margin: 0;
-  padding: 20px;
-  font-size: 2rem;
-
+  padding: 10px;
+  font-size: 7rem;
 }
 
-@media only screen and (max-width: 900px) {
-  #about{
-    padding: 20px;
-    margin: 30px 50px;
-  }
-}
 
 @media only screen and (max-width: 600px) {
     #about{
@@ -184,16 +178,27 @@ li {
 
 /* Projects   ************************** */
 
-#projects{
+#projects {
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: white; 
+  background-color: white;
+  margin-top: 1rem;
+}
+
+.projectGridItem {
+  margin-top: 1rem;
 }
 
 .projectsHeader {
   margin:10px;
-  color: white;
+  color: #000;
+  font-size: 3rem;
+}
+
+.project-title {
+  font-size: 2rem;
+  margin: 2.5rem 0;
 }
 
 .projectsGrid {
@@ -209,14 +214,16 @@ li {
   text-align: center;
   border-color: #000;
   border-top: 1px;
+  padding: 5rem;
+ 
 }
 
-.projectImage{
-  margin: 30px 30px 30px 30px;   
+.projectImage {
+  margin: 0 auto;   
   transition: box-shadow 1s;
-  height: 40%;
-  width: 30%;
-  flex: 1;  
+  width: 50%;
+  height: 50%; 
+  padding: 2rem;
 }
 
 .projectImage:hover{
@@ -226,27 +233,53 @@ li {
 .projects-description-wrap{
   margin-top: 100px;
   display: flex;
-  flex: 1;  
+  
+}
+
+.projects-description {
+  margin: 25px 15px 0 15px;
+  font-size: 2rem;
+  text-align: left;
+  padding: 2rem;
 }
 
 
-.projects-link{
+.project-link{
   padding: 5px;
   margin: 10px 10px 20px 10px;
+  font-size: 3.4rem;
+  color: #000;
+}
+.carru {
+  margin-top: 3rem;
 }
 
+hr {
+  width: 350px;
+  margin: 0 auto;
+  background-color: #de0606;
+  height: 2px;
+  
+}
 @media only screen and (max-width: 600px) {
-  .projectImage{
-    margin: 10px;   
-    transition: box-shadow 1s;
-    /* height: 40%;
-    width: 100%; */
-    flex: 1;      
+  .projectImage {     
+    width: 350px; 
+    height: 350px;
+    padding: 0;
+     
   }
 
   .projectsGridItem {
-    display: flex;
     flex-direction: column;
+    padding: 0;
+  }
+
+  .projects-description {
+    padding: 0;
+  }
+
+  hr {
+    width: 100px;    
   }
 }
 
@@ -258,6 +291,10 @@ li {
   padding: 30px;
 }
 
+#contact h3 {
+  font-size: 3rem;
+}
+
 .formContainer{
   display: flex;
   flex-direction: column;
@@ -265,20 +302,6 @@ li {
   align-content: center;
   margin: 30px 150px;
   border: solid 3px;  
-}
-
-.emailForm, .messageForm {
-  padding: 3px;
-  font-family: Helvetica;
-  text-align: center;
-}
-
-button {
-  padding: 8px 12px 8px 12px;
-  margin: 10px;
-  background-color: rgb(49, 49, 241);
-  border-radius: 15px;
-  color: white;  
 }
 
 .social-media {
@@ -290,10 +313,11 @@ button {
 .social-media a {
   color: #000;
 }
-.social-media li {
+
+.social-media i {
   margin: 0;
   padding: 20px;
-  font-size: 2rem;
+  font-size: 3rem;
 
 }
 
@@ -312,4 +336,5 @@ footer {
 
 .footer-text {
   padding: 30px;
+  font-size: 2rem;
 }

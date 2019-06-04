@@ -8,17 +8,14 @@ import Carru from "./Images/carru.jpg";
 
 function Homepage() {
     return (
-        <div>  
+        <div>
             <div className="homepage">
-                <nav>        
+                <nav>
                     <ul className="main-nav sticky">
-                        <li className="push">My Portfolio</li>
+                        <li className="push">Luigi Nurra</li>
                         <a href="#about" className="link"><li >About me</li></a>
                         <a href="#projects" className="link"><li >Projects</li></a>
                         <a href="#contact" className="link"><li >Contact</li></a>
-                        {/* <Link to="/aboutme" className="link"><li >About me</li></Link> */}
-                        {/* <Link to="/contact" className="link"><li >Contact</li></Link>
-                        <Link to="/projects" className="link"><li >Projects</li></Link>    */}
                     </ul>
                 </nav>
                 <div className="background-container">
@@ -29,17 +26,19 @@ function Homepage() {
                     <div className="cover"></div>
                     {/* <img className="cover" src={ BackgroundPc }/> */}
                 </div>
-           </div>
-           <div id="about">
+            </div>
+            <div id="about">
                 <h2 className="about-header">About me</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                 elit. Curabitur imperdiet vehicula enim, sed 
-                 venenatis tortor finibus eu. In sed nibh nisl. 
-                 Praesent aliquam cursus diam, sed vestibulum sem 
-                 facilisis ac. Vestibulum rutrum erat vitae tempus
-                 maximus. Integer ligula enim, consectetur ut erat 
-                 pharetra, dictum euismod ipsum. Morbi blandit, dolor
-                 ultrices posuere cursus, ante nulla vulputate orci, a semper nisl dolor a sem. Quisque pellentesque a felis sit amet congue. </p>
+                    elit. Curabitur imperdiet vehicula enim, sed
+                    venenatis tortor finibus eu. In sed nibh nisl.
+                    Praesent aliquam cursus diam, sed vestibulum sem
+                    facilisis ac. Vestibulum rutrum erat vitae tempus
+                    maximus. Integer ligula enim, consectetur ut erat
+                    pharetra, dictum euismod ipsum. Morbi blandit, dolor
+                    ultrices posuere cursus, ante nulla vulputate orci,
+                    a semper nisl dolor a sem. Quisque pellentesque a felis sit amet congue.
+                </p>
                 <div className="tech-stack">
                     <ul className="tech-stack-list">
                         <li><i class="fab fa-js-square js"></i></li>
@@ -50,50 +49,63 @@ function Homepage() {
                     </ul>
                 </div>
 
+            </div>
 
-           </div>
-           <div id="projects">
-                        <h2 className="projectsHeader">Projects</h2>
-                        {/* <div className="projectsGrid"> */}
-                            <div className="projectsGridItem">
-                                <img className="projectImage" src={ Kodflix }/>                                
-                                    <div className="project-description-wrap">
-                                        <p className="projects-description">A couple of lines of project description</p>
-                                        <a href="test.com" className="projects-link">Kodflix</a>
-                                    </div>
-                            </div>
-                            <div className="projectsGridItem">
-                                <img className="projectImage" src={ Carru }/>                                  
-                                    <div className="project-description-wrap">
-                                        <p className="projects-description">A couple of lines of project description</p>
-                                        <a href="test.com" className="projects-link">CarrU</a>
-                                    </div>    
-                            </div>
-                        {/* </div>         */}
-           </div>
-           <div id="contact">
+            <div id="projects">
+                <h2 className="projectsHeader">Projects</h2>
+                <hr></hr>
+                <h3 className="project-title">Kodflix</h3>
+                {/* <div className="projectsGrid"> */}
+                <div className="projectsGridItem kodflix">
+
+                    <img className="projectImage" src={Kodflix} />
+                    <div className="project-description-wrap">
+                        <p className="projects-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Curabitur imperdiet vehicula enim, sed
+                            venenatis tortor finibus eu. In sed nibh nisl.
+                            Praesent aliquam cursus diam, sed vestibulum sem
+                            facilisis ac.
+                                        </p>
+                        <div><a href="#" ><i class="fab fa-github-square project-link link"></i></a></div>
+                    </div>
+                </div>
+
+                <h3 className="project-title">Carru</h3>
+                {/* <div className="projectsGrid"> */}
+                <div className="projectsGridItem carru">
+
+                    <img className="projectImage" src={Carru} />
+                    <div className="project-description-wrap">
+                        <p className="projects-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit. Curabitur imperdiet vehicula enim, sed
+                            venenatis tortor finibus eu. In sed nibh nisl.
+                            Praesent aliquam cursus diam, sed vestibulum sem
+                            facilisis ac.
+                                        </p>
+                        <div><a href="#" ><i class="fab fa-github-square project-link link"></i></a></div>
+                    </div>
+                </div>
+                {/* </div>         */}
+            </div>
+            <div id="contact">
                 <h3>Get in touch</h3>
                 <div className="social">
                     <ul className="social-media">
-                        <li><a href="#" ><i class="fas fa-envelope"></i></a></li>
-                        <li><a href="#" ><i class="fab fa-github-square"></i></a></li>
-                        <li><a href="#" ><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#" ><i class="fas fa-envelope link"></i></a></li>
+                        <li><a href="#" ><i class="fab fa-github-square link"></i></a></li>
+                        <li><a href="#" ><i class="fab fa-youtube link"></i></a></li>
                     </ul>
                 </div>
 
-                {/* <form className="formContainer">
-                        <input className="emailForm" type="email" placeholder="please enter your email address" required></input>
-                        <textarea className="messageForm"placeholder="please type your message"></textarea>
-                
-                </form>
-                <button type="submit" form="formContainer" value="Submit" strong>Send</button> */}
-           </div> 
-           <footer>
-               <p className="footer-text">website made by</p>
-           </footer>
+            </div>
+            <footer>
+                <p className="footer-text">copyright @Luigi Nurra 2019</p>
+            </footer>
 
         </div>
-        
+
     )
 }
 
